@@ -1,0 +1,333 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sequelize-Panel",
+		"_postman_id": "fa724793-f01a-5ac1-1be4-5121af23dfe4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:4000/registration",
+			"request": {
+				"url": "localhost:4000/registration",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sagar",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"description": "",
+							"type": "file",
+							"src": "sagar.jpg"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sagar@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/login",
+			"request": {
+				"url": "localhost:4000/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\":\"sagar@gmail.com\",\n\"password\":\"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/viewProfile",
+			"request": {
+				"url": "localhost:4000/viewProfile",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQxNzY2MzA4fQ.-foWoWfKZTq7RDa4_cRjsiejzPzVUG7RjslYhOgm3fw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"sagar@gmail.com\",\n\t\"password\":\"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/updateProfile",
+			"request": {
+				"url": "localhost:4000/updateProfile",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQxNzY2MzA4fQ.-foWoWfKZTq7RDa4_cRjsiejzPzVUG7RjslYhOgm3fw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sagar",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "javiyasagar@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"description": "",
+							"type": "file",
+							"src": "sagar.jpg"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/resetPassword",
+			"request": {
+				"url": "localhost:4000/resetPassword",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQxNzY2MzA4fQ.-foWoWfKZTq7RDa4_cRjsiejzPzVUG7RjslYhOgm3fw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"currentPassword\":\"123456\",\n\t\"password\":\"1234567\",\n\t\"confirmPassword\":\"1234567\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/address",
+			"request": {
+				"url": "localhost:4000/address",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQxNzY2MzA4fQ.-foWoWfKZTq7RDa4_cRjsiejzPzVUG7RjslYhOgm3fw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"title\":\"home\",\n\t\"addressLine1\":\"akhabarnagar vadaj\",\n\t\"addressLine2\":\"gota circle\",\n\t\"city\":\"Ahmedabad\",\n\t\"state\":\"Gujarat\",\n\t\"country\":\"India\",\n\t\"pinCode\":\"380013\"\n\t\n},{\n\t\"title\":\"office\",\n\t\"addressLine1\":\"Science City\",\n\t\"addressLine2\":\"gota\",\n\t\"city\":\"Ahmedabad\",\n\t\"state\":\"Gujarat\",\n\t\"country\":\"India\",\n\t\"pinCode\":\"380015\"\n\t\n}]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/viewAddress/:id",
+			"request": {
+				"url": {
+					"raw": "localhost:4000/viewAddress/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"viewAddress",
+						":id"
+					],
+					"query": [],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQxNzY2MzA4fQ.-foWoWfKZTq7RDa4_cRjsiejzPzVUG7RjslYhOgm3fw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/api/address/update/:id",
+			"request": {
+				"url": {
+					"raw": "localhost:4000/api/address/update/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"address",
+						"update",
+						":id"
+					],
+					"query": [],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQxNzY2MzA4fQ.-foWoWfKZTq7RDa4_cRjsiejzPzVUG7RjslYhOgm3fw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Office\",\n\t\"addressLine1\":\"akhabarnagar vadaj new vandna prak\",\n\t\"addressLine2\":\"gota circle\",\n\t\"city\":\"Ahmedabad\",\n\t\"state\":\"Gujarat\",\n\t\"country\":\"India\",\n\t\"pinCode\":\"380013\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/api/address/delete/:id",
+			"request": {
+				"url": {
+					"raw": "localhost:4000/api/address/delete/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"address",
+						"delete",
+						":id"
+					],
+					"query": [],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjQxNzU4NzQxfQ.4IVXPOImj6fL6HTQ-ZaZcLq7BWaematHNjmttvNwfho",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/viewAllAddress",
+			"request": {
+				"url": "localhost:4000/viewAllAddress",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjQxNzU4NzQxfQ.4IVXPOImj6fL6HTQ-ZaZcLq7BWaematHNjmttvNwfho",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
